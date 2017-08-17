@@ -1,7 +1,7 @@
 # proton-theme
 **proton** is a wordpress start up theme for develop and learn, we should be proud when we finished .. until then keep coding, design, learning, enjoy, get happy, get mad and at least take the opportunity.
 
-### Wellcome On Board
+### Welcome On Board
 
   - What are you going to need?
     - Cool Energy 
