@@ -48,8 +48,14 @@
 							<p class="proton-site-description"><?php  bloginfo('description') ?></p>
 						</div>
 						<div class="flex-child" id="content-wigget-2">
-							<?php if ( ! dynamic_sidebar( 'sidebar-header-2' ) ) : ?>             
-               				<?php endif; // end footer widget area ?>    
+						<?php
+	$args = array( 'numberposts' => '5' );
+	$recent_posts = wp_get_recent_posts( $args );
+	foreach( $recent_posts as $recent ){
+		echo '<div class="blog-container"><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </div> ';
+	}
+	wp_reset_query();
+?>
 						</div>
 					</div>
 				</header>

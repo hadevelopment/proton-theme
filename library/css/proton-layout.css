@@ -1,64 +1,85 @@
 #proton-site-inner {
-	display: flex;
+    display: flex;
     flex-flow: column;
     margin-left: 20rem;
 }
 
-#proton-site-inner > #proton-header, #proton-content, #proton-footer{
-	min-height: 721px;
+
+/* Allows Containers full heigth on Viewport */
+
+#proton-site-inner>#proton-header,
+#proton-content,
+#proton-footer {
+    min-height: 100vh;
 }
 
 #proton-header {
     display: flex;
     flex: 1;
 }
-#proton-header .proton-flex{
-	display: flex;
-	flex: 1;
-	flex-flow: column nowrap;
-	width: 100%;
+
+#proton-header .proton-flex {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    width: 100%;
 }
+
 .proton-aside {
     bottom: 0;
     content: " ";
     position: fixed;
     left: 0;
     top: 32px;
-	width: 20rem;
+    width: 20rem;
 }
 
-.flex-child#content-menu
-,.flex-child#content-wigget-1
-,.flex-child#content-wigget-2
-,.flex-child#content-top{
-	flex: 1 1!important;	
+.flex-child#content-menu,
+.flex-child#content-wigget-1,
+.flex-child#content-wigget-2,
+.flex-child#content-top {
+    flex: 1 1!important;
 }
-.flex-child#content-menu,.flex-child#content-top {
-	flex-basis: 5% !important;
+
+.flex-child#content-menu,
+.flex-child#content-top {
+    flex-basis: 5% !important;
 }
+
 .flex-child#content-wigget-1 {
-	flex-basis: 32.5% !important;
+    flex-basis: 32.5% !important;
 }
+
 .flex-child#content-title {
-	flex-basis: 17.5% !important;
+    flex-basis: 17.5% !important;
 }
+
 .flex-child#content-wigget-2 {
-	flex-basis: 40% !important;
+    display: flex;
+    flex-basis: 40% !important;
 }
 
 .flex-child#content-top {
-	display: flex;
-	justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
+
 .proton-container #proton-title-post {
-	display: flex;
-	flex-basis: 85% !important;
+    display: flex;
+    flex-basis: 85% !important;
     flex-flow: column;
     justify-content: space-between;
 }
-.proton-container #proton-title-post #proton-quick-navigator{
-	text-align: right;
+
+.proton-container #proton-title-post #proton-quick-navigator {
+    text-align: right;
 }
+
 .proton-container #proton-navigation-post {
-	flex-basis: 15% !important;
+    flex-basis: 15% !important;
+}
+
+.blog-container {
+    display: flex;
+    flex: 1 1;
 }
