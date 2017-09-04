@@ -160,6 +160,7 @@ function proton_fonts_url() {
 	return $fonts_url;
 }
 
+add_theme_support( 'post-thumbnails' );
 
 /**
  * Enqueue scripts and styles.

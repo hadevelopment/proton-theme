@@ -79,7 +79,37 @@
     flex-basis: 15% !important;
 }
 
+
+/* On Testing */
+
 .blog-container {
     display: flex;
     flex: 1 1;
+    margin: 0.2rem;
+}
+
+.content-box {
+    display: flex;
+    flex: 1 1;
+    align-items: flex-end;
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+.blog-container-title {
+    flex: 1 1;
+    text-align: left;
+    font-size: 1.2rem;
+    padding: 1rem;
+    transition: all .1s ease-in-out;
+}
+
+.blog-container {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}
+
+.blog-container:hover .blog-container-title {
+    font-size: 3.5rem;
 }

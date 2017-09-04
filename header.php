@@ -2,7 +2,7 @@
 /**
  * The template for displaying the header
  *
- * Displays all of the head element and everything up until the "site-content" div.
+ * Displays all of the head element and everything up until the "proton-content" div.
  *
  */
 
@@ -49,10 +49,11 @@
 						</div>
 						<div class="flex-child" id="content-wigget-2">
 						<?php
-	$args = array( 'numberposts' => '5' );
+	$args = array( 'numberposts' => '3' );
 	$recent_posts = wp_get_recent_posts( $args );
 	foreach( $recent_posts as $recent ){
-		echo '<div class="blog-container"><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </div> ';
+		$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID = $recent["ID"]), 'full' );
+		echo '<div class="blog-container" style="background: url('. $url.')no-repeat;"><a class="content-box" href="' . get_permalink($recent["ID"]) . '">' . '<h3 class="blog-container-title">' . $recent["post_title"] . '</h3>' .'</a> </div> ';
 	}
 	wp_reset_query();
 ?>
