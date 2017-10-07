@@ -168,11 +168,12 @@ add_theme_support( 'post-thumbnails' );
 function proton_scripts() {
 	wp_enqueue_style( 'proton-style', get_stylesheet_uri() );
 
-	wp_register_style( 'ṕroton-layout-style', get_stylesheet_directory_uri() . '/library/css/proton-layout.css', array(), '', 'all' );
+	wp_register_style( 'proton-layout-style', get_stylesheet_directory_uri() . '/library/css/proton-layout.css', array(), '', 'all' );
 
-	wp_enqueue_style('ṕroton-layout-style');
+	wp_enqueue_style('proton-layout-style');
 
-
+	wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/library/js/libs/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
+	
 }
 add_action( 'wp_enqueue_scripts', 'proton_scripts' );
 
